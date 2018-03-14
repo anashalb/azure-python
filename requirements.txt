@@ -1,0 +1,10 @@
+azure-cognitiveservices-language-spellcheck
+azure-cognitiveservices-language-textanalytics
+azure-cognitiveservices-search-customsearch
+azure-cognitiveservices-search-entitysearch
+azure-cognitiveservices-search-imagesearch
+azure-cognitiveservices-search-newssearch
+azure-cognitiveservices-search-videosearch
+azure-cognitiveservices-search-websearch
+azure-cognitiveservices-vision-computervision
+azure-cognitiveservices-vision-contentmoderator
