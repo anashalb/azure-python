@@ -20,7 +20,7 @@ fi
 git pull origin
 
 if [[ $(git tag -l $PYVERSION-$VERSION) ]]; then
-	echo "don't do anything"
+	echo "No new version to tag."
 else
 	git tag -a "$PYVERSION-$VERSION" -m "Automated build version $PYVERSION-$VERSION"
 fi
