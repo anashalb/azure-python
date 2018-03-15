@@ -13,7 +13,7 @@ Python-ready environment (running Python 3.6) with all the Microsoft Azure Cogni
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.6-0.1`, `latest`]
+- [`3.6-0.1`, `latest`](https://github.com/anashalb/azure-python/blob/master/Dockerfile)
 
 # What are Azure Cognitive Services?
 
