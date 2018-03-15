@@ -11,17 +11,18 @@ PYVERSION=$(awk '$2 == "PYTHON_VERSION" { print $3; exit }' Dockerfile)
 IMAGE=azure-python:$PYVERSION-$VERSION
 
 if git diff-index --quiet HEAD --; then
-    echo "No changes were made to the repository. Pushing suspended."
-else
-    
+    echo "Nothing to commit."
+else 
 	git add .
-
 	git commit -m "Automated Build Python Version $PYVERSION - Image Version $VERSION"
-
 fi
 
 git pull origin
 
-git tag -a "$PYVERSION-$VERSION" -m "Automated build version $PYVERSION-$VERSION"
+if [[ $(git tag -l $PYVERSION-$VERSION) ]]; then
+	echo "don't do anything"
+else
+	git tag -a "$PYVERSION-$VERSION" -m "Automated build version $PYVERSION-$VERSION"
+fi
 
-git push origin	
+git push origin	--tags
