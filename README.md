@@ -13,7 +13,7 @@ Python-ready environment (running Python 3.6) with all the Microsoft Azure Cogni
 
 # Supported tags and respective `Dockerfile` links
 
--	[`0.1`, `latest`]
+-	[`3.6-0.1`, `latest`]
 
 # What are Azure Cognitive Services?
 
@@ -59,8 +59,10 @@ where your mounted directory contains a main.py file.
 
 # Image Variants
 
-The `azure-python` images depend on the running version of Python,
+# `azure-python:latest`
 
-# `azure-python3.6:<version>`
+This is the defacto image, running the latest Python version and the latest azure-python release. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+# `azure-python:<python-version>-<version>`
+
+The `azure-python` images depend on the running version of Python, as well as the release version of this image. For example, to run the image with Python 3.6 and release 1.0, pull anashalb.azure-python:3.6-1.0
