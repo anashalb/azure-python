@@ -26,3 +26,4 @@ else
 fi
 
 git push origin	--tags
+git push origin
