@@ -1,4 +1,4 @@
-Python-ready environment (running Python 3.6) with all the Microsoft Azure Cognitive Services modules pre-installed.
+Python-ready environment with all the Microsoft Azure Cognitive Services modules pre-installed.
 
  * azure-cognitiveservices-language-spellcheck
  * azure-cognitiveservices-language-textanalytics
@@ -24,7 +24,7 @@ Microsoft Azure Cognitive Services allows you to easily add vision, speech, lang
 ## Create a Dockerfile in your Python app project
 
 ```console
-FROM azure-python3.6:latest
+FROM azure-python:latest
 
 WORKDIR /usr/src/app
 
@@ -46,13 +46,13 @@ $ docker run -it --rm --name my-running-app my-python-app
 For an expirement, you might find this image sufficient to work with. In such as case, you can start the container from this image in your script's working directory,
 
 ```console
-$ docker run -it --rm --name some-app -v "$PWD":/usr/src/app anashalb/azure-python3.6 python your-daemon-or-script.py
+$ docker run -it --rm --name some-app -v "$PWD":/usr/src/app anashalb/azure-python python your-daemon-or-script.py
 ```
 
 OR
 
 ```console
-$ docker run -it --rm --name some-app -v "$PWD":/usr/src/app anashalb/azure-python3.6
+$ docker run -it --rm --name some-app -v "$PWD":/usr/src/app anashalb/azure-python
 ```
 
 where your mounted directory contains a main.py file.
@@ -65,4 +65,4 @@ This is the defacto image, running the latest Python version and the latest azur
 
 # `azure-python:<python-version>-<version>`
 
-The `azure-python` images depend on the running version of Python, as well as the release version of this image. For example, to run the image with Python 3.6 and release 1.0, pull anashalb.azure-python:3.6-1.0
+The `azure-python` images depend on the running version of Python, as well as the release version of this image. For example, to run the image with Python 3.6 and release 1.0, pull anashalb.azure-python:3.6-1.0do
